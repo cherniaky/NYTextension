@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "NYT News",
+    "version": "1.0.0",
+
+    "description": "The New York Times Articles full access. It is a 'Proof of Concept' work. Please wait until page is fully loaded, then you must have access to the article",    
+
+    "action": {
+        "default_icon": "images/icon48.png",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "128": "images/icon128.png",
+        "64": "images/icon64.png",
+        "48": "images/icon48.png"
+    },
+    "permissions": ["activeTab", "scripting", "tabs"],
+    "content_scripts": [
+        {
+            "matches": ["https://www.nytimes.com/*/*"],
+            "js": ["content.js"]
+        }
+    ]
+}
